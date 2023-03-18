@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button-long {
+  width:240px;
+  height:40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  background-color:#429750;
+  border:1px solid black;
+  
 }
+
+.button:active{background-color:rgb(7, 100, 7)}
+.button-long:active{background-color:rgb(7, 100, 7)}
+
+.button{
+  width:60px;
+  height: 60px;
+  font-size: 25px;
+  background-color:#429750;
+  border:1px solid black
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
+
+h1 {
+  text-align: center;
+  
+  
+}
+.screen{
+  border:1px solid black;
+  height: 60px;
+  line-height: 60px;
+  font-size:20px;
+  margin: auto;
+  width: 240px;
+  
+}
+
+.grid-container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 240px;
+}
+
+.grid-item {
+  text-align: center;
+}
+
