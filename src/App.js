@@ -64,18 +64,25 @@ function App() {
         setPointUsed(true);
       }
       if(calculated){
-        setScreen(".")
-        setCalculated(false)
+        setScreen(".");
+        setCalculated(false);
         setPointUsed(true);
       }
     }
   }
 
   const handleOperationClick = (operation) => {
-    setMemory(screen);
-    setScreen("");
-    setOperation(operation);
-    setPointUsed(false);
+    if(((screen==="" || screen==="0") && operation==="-") || calculated===true  ){
+      setScreen("-");
+      setCalculated(false);
+    }
+    else{ 
+      setMemory(screen);
+      setScreen("");
+      setOperation(operation);
+      setPointUsed(false);
+    }
+
   }
 
 
@@ -114,7 +121,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className='calculator-body'>
       <Display screen={screen} />
       
       <div className="grid-container">
