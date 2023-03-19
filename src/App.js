@@ -72,7 +72,7 @@ function App() {
   }
 
   const handleOperationClick = (operation) => {
-    if(((screen==="" || screen==="0") && operation==="-") || calculated===true  ){
+    if(((screen==="" || screen==="0") && operation==="-") || (calculated===true && operation==="-") ){
       setScreen("-");
       setCalculated(false);
     }
