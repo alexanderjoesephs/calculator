@@ -72,11 +72,19 @@ function App() {
   }
 
   const handleOperationClick = (operation) => {
-    if(((screen==="" || screen==="0") && operation==="-") || (calculated===true && operation==="-") ){
-      setScreen("-");
-      setCalculated(false);
+    if(operation==="-"){
+      if(screen==="" || screen==="0" ){
+        setScreen("-");
+        setCalculated(false);
+      }
+      else{ 
+        setMemory(screen);
+        setScreen("");
+        setOperation(operation);
+        setPointUsed(false);
+      }
     }
-    else{ 
+    if(operation==="+" || operation==="x" || operation==="/" ){
       setMemory(screen);
       setScreen("");
       setOperation(operation);
